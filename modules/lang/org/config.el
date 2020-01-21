@@ -122,8 +122,8 @@ path too.")
         org-refile-use-outline-path 'file
         org-outline-path-complete-in-steps nil)
 
-  ;; Fontify latex blocks and entities natively
-  (setq org-highlight-latex-and-related '(native script entities))
+  ;; Fontify latex blocks and entities, but not natively -- that's too slow
+  (setq org-highlight-latex-and-related '(latex script entities))
   (plist-put! org-format-latex-options
               :scale 1.5         ; larger previews
               :foreground 'auto  ; match the theme foreground
@@ -798,11 +798,6 @@ compelling reason, so..."
 
 (use-package! org-bullets ; "prettier" bullets
   :hook (org-mode . org-bullets-mode))
-
-
-(use-package! org-fancy-priorities ; priority icons
-  :hook (org-mode . org-fancy-priorities-mode)
-  :config (setq org-fancy-priorities-list '("■" "■" "■")))
 
 
 (use-package! org-crypt ; built-in
