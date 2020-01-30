@@ -1,5 +1,5 @@
 Installation:
 
-git clone https://github.com/columccrowe/doom-emacs ~/.emacs.d
+git clone https://github.com/columcrowe/doom-emacs ~/.emacs.d
 
 ~/.emacs.d/bin/doom install
